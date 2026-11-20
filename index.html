@@ -44,6 +44,9 @@
         It holds two annotations, a rectangle and an ellipse. Open them from the
         Annotations button on the image or from Annotations in the panel.
       </p>
+      <p>
+        <a href="https://github.com/mathewjordan/clover-annotations-test">View this example on GitHub</a>.
+      </p>
       <clover-viewer
         iiif-content="https://manifests.collections.yale.edu/ypm/nat/6299"
         template="default"
@@ -63,6 +66,34 @@
   annotations="assets/annotations/test-annotations.json"
 &gt;
 &lt;/clover-viewer&gt;</code></pre>
+      <h2>Steps</h2>
+      <ol>
+        <li>Load Clover's script in the page's <code>&lt;head&gt;</code>.</li>
+        <li>
+          Export the annotations from liiive.now and save the file beside the
+          page.
+        </li>
+        <li>
+          Give the Viewer the Manifest as <code>iiif-content</code> and the file
+          as <code>annotations</code>.
+        </li>
+      </ol>
+      <h2>Gotchas</h2>
+      <ul>
+        <li>
+          A relative path resolves against the page's address, not the site's
+          root. On a GitHub Pages project site, <code>../../assets/…</code> from
+          the homepage leaves the repository's folder and fails to load.
+        </li>
+        <li>
+          A file on another host needs CORS headers, or the browser will not
+          hand it to Clover.
+        </li>
+        <li>
+          Each annotation must target a Canvas in the Manifest by its exact
+          <code>id</code>. liiive.now's export does.
+        </li>
+      </ul>
     </main>
   </body>
 </html>
