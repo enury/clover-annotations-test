@@ -18,6 +18,19 @@
       code {
         font-size: 0.875em;
       }
+      pre {
+        margin: 0;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        background: #f6f6f6;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+      }
+      h2 {
+        margin-top: 2rem;
+        font-size: 1.25rem;
+      }
     </style>
   </head>
   <body>
@@ -39,6 +52,17 @@
         annotations="assets/annotations/test-annotations.json"
       >
       </clover-viewer>
+      <h2>Code</h2>
+      <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/@nulib/clover/dist/web-components/index.umd.js"&gt;&lt;/script&gt;
+
+&lt;clover-viewer
+  iiif-content="https://manifests.collections.yale.edu/ypm/nat/6299"
+  template="default"
+  items="grid"
+  header="false"
+  annotations="assets/annotations/test-annotations.json"
+&gt;
+&lt;/clover-viewer&gt;</code></pre>
     </main>
   </body>
 </html>
