@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clover annotations test</title>
+    <script src="https://cdn.jsdelivr.net/npm/@nulib/clover/dist/web-components/index.umd.js"></script>
+    <style>
+      body {
+        margin: 0 auto;
+        max-width: 72rem;
+        padding: 1rem;
+        font-family: system-ui, sans-serif;
+        line-height: 1.5;
+        background: #fff;
+        color: #111;
+      }
+      code {
+        font-size: 0.875em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Clover annotations test</h1>
+      <p>
+        A Yale Peabody Museum Manifest, with an AnnotationPage exported from
+        liiive.now added through the Viewer's <code>annotations</code>
+        attribute:
+        <a href="assets/annotations/test-annotations.json"><code>assets/annotations/test-annotations.json</code></a>.
+        It holds two annotations, a rectangle and an ellipse. Open them from the
+        Annotations button on the image or from Annotations in the panel.
+      </p>
+      <clover-viewer
+        iiif-content="https://manifests.collections.yale.edu/ypm/nat/6299"
+        template="default"
+        items="grid"
+        header="false"
+        annotations="assets/annotations/test-annotations.json"
+      >
+      </clover-viewer>
+    </main>
+  </body>
+</html>
